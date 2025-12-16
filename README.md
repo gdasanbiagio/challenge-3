@@ -380,6 +380,65 @@ docker-compose down
 docker-compose up -d --build
 ```
 
+## 🔄 CI/CD con GitHub Actions
+
+El proyecto incluye un pipeline de integración continua configurado con GitHub Actions.
+
+### Estado del build:
+
+![CI](https://github.com/gdasanbiagio/challenge-3/actions/workflows/ci.yml/badge.svg)
+
+### ¿Qué ejecuta el pipeline?
+
+```
+En cada push o pull request a main →
+│
+├── 🧪 Job: Tests
+│   ├── Setup PHP 8.2 + MySQL 8.0
+│   ├── Instalar dependencias (con cache)
+│   ├── Ejecutar migraciones
+│   └── Correr tests automatizados
+│
+└── 📝 Job: Code Quality
+    └── Verificar estándares PSR-12
+```
+
+### Archivo de configuración:
+
+📄 `.github/workflows/ci.yml`
+
+### Ver ejecuciones:
+
+👉 [GitHub Actions](https://github.com/gdasanbiagio/challenge-3/actions)
+
+## 🌟 Extras Implementados
+
+Este proyecto incluye las siguientes mejoras adicionales que van más allá de los requisitos básicos:
+
+| Extra | Descripción |
+|-------|-------------|
+| ✅ **Autenticación con Token** | Laravel Sanctum para proteger los endpoints |
+| ✅ **Documentación Swagger** | OpenAPI 3.0 con UI interactiva |
+| ✅ **Tests Automatizados** | 9 tests con 48 assertions |
+| ✅ **CI/CD** | GitHub Actions para integración continua |
+| ✅ **Frontend Moderno** | Interfaz responsive con diseño premium |
+| ✅ **Docker** | Containerización completa con docker-compose |
+
+## 💡 Propuestas de Mejora Futuras
+
+Ideas para continuar mejorando el proyecto:
+
+1. **Paginación** - Implementar paginación en el listado de órdenes
+2. **Filtros** - Filtrar órdenes por estado, fecha, cliente
+3. **Cache** - Redis para cachear consultas frecuentes
+4. **Rate Limiting** - Limitar peticiones por usuario/IP
+5. **Webhooks** - Notificaciones cuando cambia el estado de una orden
+6. **Soft Deletes** - Eliminación lógica de órdenes
+7. **Auditoría** - Log de cambios en las órdenes
+8. **API Versioning** - Versionado de la API (v1, v2)
+9. **Queue Jobs** - Procesar tareas pesadas en background
+10. **Métricas** - Dashboard con estadísticas de órdenes
+
 ## 📝 Licencia
 
 MIT License
