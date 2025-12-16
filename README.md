@@ -1,5 +1,7 @@
 # Urbano Express - Orders API
 
+![CI](https://github.com/gdasanbiagio/challenge-3/actions/workflows/ci.yml/badge.svg)
+
 ## 📦 Descripción del Proyecto
 
 Este proyecto es una **API REST para gestión de órdenes de e-commerce** desarrollada como parte del desafío técnico para PHP Full Stack Developer.
